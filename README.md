@@ -1,5 +1,14 @@
 # ChristianTallner-WebServices-Slutuppgift
 
+
+<!-- Checkbox with color 
+-- Done? | Name
+:---:| ---
+⬜️| Nope
+✅| Yep
+-->
+
+
 ## Requirements for this assignment
 
 ### Handing in
