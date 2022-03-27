@@ -24,7 +24,7 @@
 - [ ] Root ("/") is landing a page where all functionlities and documents are linked.
 
 ### Functions and subfunctions
-- [ ] Kalkylator
+- [ ] Kalcylator
   * [ ] Plus
   * [ ] Minus
   * [ ] Multiplication
