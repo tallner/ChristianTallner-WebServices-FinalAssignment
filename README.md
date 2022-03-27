@@ -14,7 +14,7 @@
 ### Handing in
 - [ ] Friday 1st April 2022 16:00
 - [ ] Complete project on github account
-- [ ] Name it YOURNAME-COURSE-PROJECT
+- [x] Name it YOURNAME-COURSE-PROJECT
 - [ ] Mark with the grade you are aiming for
 - [ ] Book 15 minutes status meeting via Doodle 2 days before handing in 
 
@@ -24,10 +24,10 @@
 - [ ] Root ("/") is landing a page where all functionlities and documents are linked.
 
 ### Functions and subfunctions
-- [ ] Kalkylator
-  * [ ] Plus
-  * [ ] Minus
-  * [ ] Multiplication
+- [x] Kalcylator
+  * [x] Plus
+  * [x] Minus
+  * [x] Multiplication
 
 - [ ] Sten, sax och påse
   * [ ] Spela ett drag mot datorn

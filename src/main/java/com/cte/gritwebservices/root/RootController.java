@@ -27,7 +27,10 @@ public class RootController {
 			result += "<ul>";
 			result += " <li><a href=http://localhost:8080/apiDoc target=_blank > API Documentation, graphical </a></li>"
 					+ " <li><a href=http://localhost:8080/v3/api-docs target=_blank > API Documentation, JSON format </a></li>"
-					+ " <li><a href=\"/calculator\">The Calculator!</a></li> "
+					+ " <li><a href=\"/calc\">The Calculator!</a></li> "
+//					+ " <li><a href=\"/add\">The Calculator - Addition!</a></li> "
+//					+ " <li><a href=\"/mult\">The Calculator - Multiplication!</a></li> "
+//					+ " <li><a href=\"/multVal\">The Calculator - Select arithmetics!</a></li> "
 					+ " <li><a href=\"/rsp\">The RSP Game!</a></li> "
 					+ " <li><a href=\"/csv\">The read CSV tester!</a></li> "
 					+ " <li><a href=\"/pic\">The picture reader!</a></li> ";
