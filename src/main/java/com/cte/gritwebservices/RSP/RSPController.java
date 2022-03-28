@@ -16,7 +16,7 @@ import io.swagger.v3.oas.annotations.Operation;
 @RestController
 public class RSPController {
 	
-	private RSPGameModel rspGame = new RSPGameModel(); //use the RSPmodel to set up a new game
+	private RSPService rspGame = new RSPService(); //use the RSPmodel to set up a new game
 	
 	//draw the gameplan from an html file
 	@Operation(summary = "Draw the gameplan", description = "Draw the gameplan as a website from an html file", tags="RockScissorsPaper")
@@ -35,38 +35,7 @@ public class RSPController {
 	public String evaluateUserInput(
 			String player1Move, 
 			String player2Move){
-		
-		// validate input
-		if (
-				(!player1Move.equals("rock") &&
-				!player1Move.equals("scissors") &&
-				!player1Move.equals("paper") &&
-				!player1Move.equals("computer"))
-				||
-				(!player2Move.equals("rock") &&
-				!player2Move.equals("scissors") &&
-				!player2Move.equals("paper") &&
-				!player2Move.equals("computer"))
-			)
-		{
-			return "Check your input values";
-		}
-		
-		// set the moves to the game model that calculates 
-		// the scores and returns it in string format
-		rspGame.setPlayer1Move(player1Move);
-		rspGame.setPlayer2Move(player2Move);
-		String currentResult = rspGame.calculateScore();
-		
-		return 
-				"Player1: " + rspGame.getPlayer1Move() + "<br>" + 
-				"Player2: " + rspGame.getPlayer2Move() + "<br>" +
-				"<br>" +
-				"Current score:" + "<br>" + currentResult + "<br>" + "<br>" + 
-				"</form>" +
-				"<form method=\"GET\" action=\"http://localhost:8080/rspgame\">" +
-				"<input type=\"submit\" value=\"NEXT ROUND\">" +
-				"</form>";
+		return rspGame.calculateScore(player1Move, player2Move);
 	}
 	
 	@Operation(summary = "Total score", description = "Get total score", tags="RockScissorsPaper")
