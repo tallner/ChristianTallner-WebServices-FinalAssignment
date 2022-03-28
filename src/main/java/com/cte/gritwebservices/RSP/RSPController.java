@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
@@ -19,7 +20,7 @@ public class RSPController {
 	private RSPService rspGame = new RSPService(); //use the RSPmodel to set up a new game
 	
 	//draw the gameplan from an html file
-	@Operation(summary = "Draw the gameplan", description = "Draw the gameplan as a website from an html file", tags="RockScissorsPaper")
+	@Hidden
 	@RequestMapping(
 			value = "/rspgame",
 			method = RequestMethod.GET,

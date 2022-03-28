@@ -1,0 +1,4 @@
+Landing page vara samma som documentation?
+Länkar till de olika sidorna från documentationssidan?
+RSP - hur göra tester för stora returns?tex jag skriver ut en hel sida i html
+RSP - hur göra tester för POST, dvs hur skickar man med BODY?
