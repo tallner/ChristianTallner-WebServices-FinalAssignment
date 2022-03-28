@@ -91,10 +91,6 @@ public class RSPService {
 			player2.resetScore();
 		}
 		
-		System.out.println("p1 " + player1Move);
-		System.out.println("p2 " + player2Move);
-		System.out.println("evaluatePlayerInputs " +evaluatePlayerInputs);
-		System.out.println("thisRoundsScore " + thisRoundsScore);
 		
 		if (evaluatePlayerInputs.equals("OK")){
 			
@@ -130,8 +126,7 @@ public class RSPService {
 			}
 			
 			//return status
-			return 
-					"Player1: " + player1.getSelectedMove() + "<br>" + 
+			return 	"Player1: " + player1.getSelectedMove() + "<br>" + 
 					"Player2: " + player2.getSelectedMove() + "<br>" +
 					"<br>" +
 					"Current score:" + 
@@ -146,7 +141,7 @@ public class RSPService {
 					"</form>";
 			
 					
-		} else return evaluateAndSetPlayerMoves(player1Move, player2Move);
+		} else return evaluatePlayerInputs;
 	}
 	
 	
