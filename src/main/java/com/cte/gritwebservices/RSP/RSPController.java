@@ -32,16 +32,17 @@ public class RSPController {
 	}
 	
 	@Operation(summary = "Evaluate round", description = "Evaluate player inputs in this round", tags="RockScissorsPaper")
-	@RequestMapping(path="/rsp", method = RequestMethod.POST)
+	@RequestMapping(value="/rsp", method = RequestMethod.POST)
 	public String evaluateUserInput(
 			String player1Move, 
-			String player2Move){
+			String player2Move)
+	{
 		return rspGame.calculateScore(player1Move, player2Move);
 	}
 	
 	@Operation(summary = "Total score", description = "Get total score", tags="RockScissorsPaper")
 	@RequestMapping(
-			path="/rsp",
+			value="/rsp",
 			method = RequestMethod.GET,
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	

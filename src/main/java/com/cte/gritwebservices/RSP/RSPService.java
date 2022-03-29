@@ -83,7 +83,7 @@ public class RSPService {
 		
 		String winner = "";
 		String evaluatePlayerInputs = evaluateAndSetPlayerMoves(player1Move, player2Move);
-		String thisRoundsScore = thisRoundsScore();
+		
 		
 		//reset scores if there is a winner from last round
 		if (player1.getCurrentScore()==3 || player2.getCurrentScore()==3) {
@@ -93,6 +93,7 @@ public class RSPService {
 		
 		
 		if (evaluatePlayerInputs.equals("OK")){
+			String thisRoundsScore = thisRoundsScore();
 			
 			//set score for the winner
 			if (thisRoundsScore.equals("player1")) {
@@ -149,8 +150,7 @@ public class RSPService {
 	// check and set the player moves
 	// if player is set to computer, then a random value will be set
 	private String evaluateAndSetPlayerMoves(String player1Move, String player2Move) {
-		
-	// validate input
+		// validate input
 	  if (
 			  (
 				  !player1Move.equals("rock") && 
@@ -177,7 +177,10 @@ public class RSPService {
 		  this.player2.setSelectedMove(randomVal());
 	  else 
 		  this.player2.setSelectedMove(player2Move);
-			
+	
+	  
+	  
+	  
 	  return "OK";
 		
 		
