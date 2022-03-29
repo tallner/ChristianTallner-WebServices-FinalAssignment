@@ -11,6 +11,7 @@ public class RSPService {
 	private RSPPlayerModel player1 = new RSPPlayerModel();
 	private RSPPlayerModel player2 = new RSPPlayerModel();
 	private int nrOfGamesPlayed;
+	private final String returnBadInput_JSON = "[ \" Check your input values \" ]";
 	
 	public RSPService() {}
 
@@ -34,9 +35,6 @@ public class RSPService {
 	}
 
 	
-
-
-	
 	// get the move. this is used for display only
 	public String getPlayer1Move() {
 		return player1.getSelectedMove();
@@ -45,38 +43,7 @@ public class RSPService {
 	public String getPlayer2Move() {
 		return player2.getSelectedMove();
 	}
-	
-	// get total nr of wins. this is used for display only
-	public int getPlayer1TotalWins() {
-		return player1.getNrOfWins();
-	}
-	
-	public int getPlayer2TotalWins() {
-		return player2.getNrOfWins();
-	}
-	
-	// get total nr of lost. this is used for display only
-	public int getPlayer1TotalLost() {
-		return player1.getNrOfLost();
-	}
-	
-	public int getPlayer2TotalLost() {
-		return player2.getNrOfLost();
-	}
-	
-	// get total nr of ties. this is used for display only
-	public int getPlayer1TotalTies() {
-		return player1.getNrOfTie();
-	}
-	
-	public int getPlayer2TotalTies() {
-		return player2.getNrOfTie();
-	}
-	
-	// get total nr of plays. this is used for display only
-	public int getNrOfGamesPlayed() {
-		return this.nrOfGamesPlayed;
-	}
+
 	
 	// calculate gamescore
 	public String calculateScore(String player1Move, String player2Move) {
@@ -126,20 +93,7 @@ public class RSPService {
 				this.nrOfGamesPlayed += 1;
 			}
 			
-			//return status
-			return 	"Player1: " + player1.getSelectedMove() + "<br>" + 
-					"Player2: " + player2.getSelectedMove() + "<br>" +
-					"<br>" +
-					"Current score:" + 
-					"<br>" + 
-					"Player1: " + player1.getCurrentScore() + "<br>" +
-					"Player2: " + player2.getCurrentScore() + "<br>" +
-					"Winner:" + winner + 
-					"<br>" + "<br>" + 
-					"</form>" +
-					"<form method=\"GET\" action=\"http://localhost:8080/rspgame\">" +
-					"<input type=\"submit\" value=\"NEXT ROUND\">" +
-					"</form>";
+			return scoreJSON(winner);
 			
 					
 		} else return evaluatePlayerInputs;
@@ -165,7 +119,7 @@ public class RSPService {
 				  !player2Move.equals("paper") && 
 				  !player2Move.equals("computer")
 			  ) 
-		) return "Check your input values";
+		) return returnBadInput_JSON;
 	  
 	  // set moves if inputs are ok
 	  if (player1Move.equals("computer")) 
@@ -268,6 +222,42 @@ public class RSPService {
 		}
 		
 		return returnVal;
+	}
+
+	public String getTotalResult_Json() {
+		return "{"+ 
+				"\"TotalNrOfGames\": \"" + this.nrOfGamesPlayed + 
+				"\"," +
+				
+				"\"Player 1\":" + 
+					"[{"+
+						"\"TotalWins\":" + "\"" + player1.getNrOfWins() + "\""+ 
+						"," +
+						"\"TotalLoss\":" + "\"" + player1.getNrOfLost() + "\""+ 
+						"," +
+						"\"TotalTie\":" + "\"" + player1.getNrOfTie() + "\""+
+					"}]"+
+				"," +
+				
+				"\"Player 2\":" + 
+					"[{"+
+						"\"TotalWins\":" + "\"" + player1.getNrOfWins() + "\""+ 
+						"," +
+						"\"TotalLoss\":" + "\"" + player1.getNrOfLost() + "\""+ 
+						"," +
+						"\"TotalTie\":" + "\"" + player1.getNrOfTie() + "\""+
+					"}]"+
+				"}";
+	}
+
+	private String scoreJSON(String winner) {
+		return "{"+ 
+					"\"Player1_Move\": \"" + player1.getSelectedMove() + "\"," + 
+					"\"Player2_Move\": \"" + player2.getSelectedMove() + "\"," +
+					"\"Player1_Score\": \"" + player1.getCurrentScore() + "\","+ 				
+					"\"Player2_Score\": \"" + player2.getCurrentScore() + "\"" + 					
+				"}";
+		
 	}
 
 }

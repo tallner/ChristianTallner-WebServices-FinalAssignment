@@ -32,7 +32,10 @@ public class RSPController {
 	}
 	
 	@Operation(summary = "Evaluate round", description = "Evaluate player inputs in this round", tags="RockScissorsPaper")
-	@RequestMapping(value="/rsp", method = RequestMethod.POST)
+	@RequestMapping(
+			value="/rsp",
+			method = RequestMethod.POST,
+			produces = MediaType.APPLICATION_JSON_VALUE)
 	public String evaluateUserInput(
 			String player1Move, 
 			String player2Move)
@@ -47,34 +50,22 @@ public class RSPController {
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	
 	public String totalScore(){
-		return ObjectJson();
+		return rspGame.getTotalResult_Json();
 	}
 	
-	private String ObjectJson() {
-		return "{"+ 
-				"\"TotalNrOfGames\": \"" + rspGame.getNrOfGamesPlayed() + 
-				"\"," +
-				
-				"\"Player 1\":" + 
-					"[{"+
-						"\"TotalWins\":" + "\"" + rspGame.getPlayer1TotalWins() + "\""+ 
-						"," +
-						"\"TotalLoss\":" + "\"" + rspGame.getPlayer1TotalLost() + "\""+ 
-						"," +
-						"\"TotalTie\":" + "\"" + rspGame.getPlayer1TotalTies() + "\""+
-					"}]"+
-				"," +
-				
-				"\"Player 2\":" + 
-					"[{"+
-						"\"TotalWins\":" + "\"" + rspGame.getPlayer2TotalWins() + "\""+ 
-						"," +
-						"\"TotalLoss\":" + "\"" + rspGame.getPlayer2TotalLost() + "\""+ 
-						"," +
-						"\"TotalTie\":" + "\"" + rspGame.getPlayer2TotalTies() + "\""+
-					"}]"+
-				"}";
-	}
-	
+	/*
+	 * private String ObjectJson() { return "{"+ "\"TotalNrOfGames\": \"" +
+	 * rspGame.getNrOfGamesPlayed() + "\"," +
+	 * 
+	 * "\"Player 1\":" + "[{"+ "\"TotalWins\":" + "\"" +
+	 * rspGame.getPlayer1TotalWins() + "\""+ "," + "\"TotalLoss\":" + "\"" +
+	 * rspGame.getPlayer1TotalLost() + "\""+ "," + "\"TotalTie\":" + "\"" +
+	 * rspGame.getPlayer1TotalTies() + "\""+ "}]"+ "," +
+	 * 
+	 * "\"Player 2\":" + "[{"+ "\"TotalWins\":" + "\"" +
+	 * rspGame.getPlayer2TotalWins() + "\""+ "," + "\"TotalLoss\":" + "\"" +
+	 * rspGame.getPlayer2TotalLost() + "\""+ "," + "\"TotalTie\":" + "\"" +
+	 * rspGame.getPlayer2TotalTies() + "\""+ "}]"+ "}"; }
+	 */
 
 }
