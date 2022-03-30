@@ -32,11 +32,11 @@
 
 - [x] Rock, Scissors, paper
   * [x] Play against computer
-  * [x] See ll results
-  * [ ] Tests
+  * [x] See all results
+  * [x] Tests
 
 - [ ] Read CSV fil
-  * [ ] Retiurn resultat as Json
+  * [ ] Return resultat as Json
 
 - [ ] Read pictures
   * [ ] Return random picture
