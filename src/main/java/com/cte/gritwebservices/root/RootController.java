@@ -31,7 +31,7 @@ public class RootController {
 //					+ " <li><a href=\"/add\">The Calculator - Addition!</a></li> "
 //					+ " <li><a href=\"/mult\">The Calculator - Multiplication!</a></li> "
 //					+ " <li><a href=\"/multVal\">The Calculator - Select arithmetics!</a></li> "
-					+ " <li><a href=\"/rsp\">The RSP Game!</a></li> "
+					+ " <li><a href=\"/rspgame\">The RSP Game!</a></li> "
 					+ " <li><a href=\"/csv\">The read CSV tester!</a></li> "
 					+ " <li><a href=\"/pic\">The picture reader!</a></li> ";
 			result += "</ul>";

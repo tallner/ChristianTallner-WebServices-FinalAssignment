@@ -1,0 +1,15 @@
+Landing page vara samma som documentation?
+Länkar till de olika sidorna från documentationssidan?
+
+
+Generellt - Klasserna delas upp mer?
+
+Glöm inte testa med tokig eller ingen data
+Slumpmässiga bilder tas från resources-mappen
+hur få in assertEquals i RSPtests när svaren man får ändras? kan man använda patterns?
+
+
+
+todo
+gör länkar till funktionerna på swagger
+om du hinner, göra JSON med patterns istället

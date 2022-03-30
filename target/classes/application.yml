@@ -2,3 +2,4 @@ springdoc:
   swagger-ui:
     enabled: true
     path: apiDoc
+    

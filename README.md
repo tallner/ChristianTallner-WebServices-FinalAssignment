@@ -1,4 +1,4 @@
-# ChristianTallner-WebServices-Slutuppgift
+# ChristianTallner-WebServices-FinalAssignment
 
 
 <!-- Checkbox with color 
@@ -28,10 +28,12 @@
   * [x] Plus
   * [x] Minus
   * [x] Multiplication
+  * [x] Tests
 
-- [x] Sten, sax och påse
-  * [x] Spela ett drag mot datorn
-  * [x] Få resultat av alla drag
+- [x] Rock, Scissors, paper
+  * [x] Play against computer
+  * [x] See all results
+  * [x] Tests
 
 - [ ] Read CSV fil
   * [ ] Return resultat as Json
