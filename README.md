@@ -29,12 +29,12 @@
   * [x] Minus
   * [x] Multiplication
 
-- [ ] Sten, sax och påse
-  * [ ] Spela ett drag mot datorn
-  * [ ] Få resultat av alla drag
+- [x] Sten, sax och påse
+  * [x] Spela ett drag mot datorn
+  * [x] Få resultat av alla drag
 
 - [ ] Read CSV fil
-  * [ ] Retiurn resultat as Json
+  * [ ] Return resultat as Json
 
 - [ ] Read pictures
   * [ ] Return random picture
