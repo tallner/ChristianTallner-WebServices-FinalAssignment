@@ -6,9 +6,11 @@ import java.io.IOException;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import com.cte.gritwebservices.HttpHelper;
 
+@SpringBootTest
 public class CalcEndpointTest {
 
 	private String sut;

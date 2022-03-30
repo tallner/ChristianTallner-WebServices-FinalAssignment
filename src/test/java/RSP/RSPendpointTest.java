@@ -10,9 +10,11 @@ import java.nio.charset.StandardCharsets;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import com.cte.gritwebservices.HttpHelper;
 
+@SpringBootTest
 public class RSPendpointTest {
 
 	private String sut;
@@ -23,25 +25,35 @@ public class RSPendpointTest {
 	}
 	
 	@Test
-	public void testEvaluateEndpointBadinput() throws IOException {
+	public void testEvaluateEndpoint() throws IOException {
 		String testVar1 = "rock";
 		String testVar2 = "scissors";
 		
-		String expected = "Check your input values";
-		//String actual = "Check your input values";
-		
-	//	System.out.println(HttpHelper.httpPOSTtest());
-		
-		
+		String notExpected = "[ \" Check your input values \" ]";
 
 		String url = sut + "/rsp";
-		//String params = "?player1Move=" + testVar1 + "&player2Move=" + testVar2;
 		String query = url;
 		String body = "player1Move=" + testVar1 + "&player2Move=" + testVar2;
 		
 		String actual = HttpHelper.UrlResponse(query, "post", body);
+
+		assertNotEquals(actual, notExpected);
+
+	}
+	
+	@Test
+	public void testTotalScoreEndpoint() throws IOException {
+		String pattern = "{\"TotalNrOfGames\": \"%s\",\"Player 1\":[{\"TotalWins\":\"%s\",\"TotalLoss\":\"%s\",\"TotalTie\":\"%s\"}],\"Player 2\":[{\"TotalWins\":\"%s\",\"TotalLoss\":\"%s\",\"TotalTie\":\"%s\"}]}";
+		String expectedFormat = String.format(pattern, 5,5,5,5,5,5,5);
 		
-		assertEquals(actual, expected);
+		String notExpected = "[ \" Check your input values \" ]";
+
+		String url = sut + "/rsp";
+		String query = url;
+		
+		String actual = HttpHelper.UrlResponse(query, "get", null);
+
+		assertNotEquals(actual, notExpected);
 
 	}
 	

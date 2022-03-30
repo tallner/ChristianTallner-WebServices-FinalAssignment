@@ -4,6 +4,7 @@ package com.cte.gritwebservices.Calculator;
 public class CalcService {
 	
 	private String pattern = "{ \"Result\":\"%s\"}";
+	private final String returnBadInput_JSON = "[ \" Check your input values \" ]";
 	
 	public CalcService() {
 	}
@@ -15,7 +16,7 @@ public class CalcService {
 			 result = String.format(pattern, Integer.valueOf(nr1)-Integer.valueOf(nr2));
 		 }
 		catch(NumberFormatException e ){
-			result = "Check your inputs";
+			result = returnBadInput_JSON;
 		 }
 		 return result;
 	}
@@ -27,7 +28,7 @@ public class CalcService {
 			 result = String.format(pattern, Integer.valueOf(nr1)+Integer.valueOf(nr2));
 		 }
 		catch(NumberFormatException e ){
-			result = "Check your inputs";
+			result = returnBadInput_JSON;
 		 }
 		 
 		return result;
@@ -41,7 +42,7 @@ public class CalcService {
 			result = String.format(pattern, Integer.valueOf(nr1)*Integer.valueOf(nr2));
 		 }
 		catch(NumberFormatException e ){
-			result = "Check your inputs";
+			result = returnBadInput_JSON;
 		 }
 		 
 		return result;
@@ -67,11 +68,11 @@ public class CalcService {
 						break;
 	
 				default: 
-					return "Check your type input";
+					return returnBadInput_JSON;
 				}	
 			}
 		}catch(NumberFormatException e ){
-			return "Check your values inputs";
+			return returnBadInput_JSON;
 		}
 		
 		return String.format(pattern, Integer.toString(result));

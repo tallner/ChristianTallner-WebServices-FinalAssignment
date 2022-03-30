@@ -34,7 +34,6 @@ public class RSPService {
 		return result;
 	}
 
-	
 	// get the move. this is used for display only
 	public String getPlayer1Move() {
 		return player1.getSelectedMove();
@@ -43,8 +42,33 @@ public class RSPService {
 	public String getPlayer2Move() {
 		return player2.getSelectedMove();
 	}
-
 	
+	public String getTotalResult_Json() {
+		return "{"+ 
+				"\"TotalNrOfGames\": \"" + this.nrOfGamesPlayed + 
+				"\"," +
+				
+				"\"Player 1\":" + 
+					"[{"+
+						"\"TotalWins\":" + "\"" + player1.getNrOfWins() + "\""+ 
+						"," +
+						"\"TotalLoss\":" + "\"" + player1.getNrOfLost() + "\""+ 
+						"," +
+						"\"TotalTie\":" + "\"" + player1.getNrOfTie() + "\""+
+					"}]"+
+				"," +
+				
+				"\"Player 2\":" + 
+					"[{"+
+						"\"TotalWins\":" + "\"" + player1.getNrOfWins() + "\""+ 
+						"," +
+						"\"TotalLoss\":" + "\"" + player1.getNrOfLost() + "\""+ 
+						"," +
+						"\"TotalTie\":" + "\"" + player1.getNrOfTie() + "\""+
+					"}]"+
+				"}";
+	}
+
 	// calculate gamescore
 	public String calculateScore(String player1Move, String player2Move) {
 		
@@ -99,7 +123,15 @@ public class RSPService {
 		} else return evaluatePlayerInputs;
 	}
 	
-	
+	private String scoreJSON(String winner) {
+		return "{"+ 
+					"\"Player1_Move\": \"" + player1.getSelectedMove() + "\"," + 
+					"\"Player2_Move\": \"" + player2.getSelectedMove() + "\"," +
+					"\"Player1_Score\": \"" + player1.getCurrentScore() + "\","+ 				
+					"\"Player2_Score\": \"" + player2.getCurrentScore() + "\"" + 					
+				"}";
+		
+	}
 	
 	// check and set the player moves
 	// if player is set to computer, then a random value will be set
@@ -222,42 +254,6 @@ public class RSPService {
 		}
 		
 		return returnVal;
-	}
-
-	public String getTotalResult_Json() {
-		return "{"+ 
-				"\"TotalNrOfGames\": \"" + this.nrOfGamesPlayed + 
-				"\"," +
-				
-				"\"Player 1\":" + 
-					"[{"+
-						"\"TotalWins\":" + "\"" + player1.getNrOfWins() + "\""+ 
-						"," +
-						"\"TotalLoss\":" + "\"" + player1.getNrOfLost() + "\""+ 
-						"," +
-						"\"TotalTie\":" + "\"" + player1.getNrOfTie() + "\""+
-					"}]"+
-				"," +
-				
-				"\"Player 2\":" + 
-					"[{"+
-						"\"TotalWins\":" + "\"" + player1.getNrOfWins() + "\""+ 
-						"," +
-						"\"TotalLoss\":" + "\"" + player1.getNrOfLost() + "\""+ 
-						"," +
-						"\"TotalTie\":" + "\"" + player1.getNrOfTie() + "\""+
-					"}]"+
-				"}";
-	}
-
-	private String scoreJSON(String winner) {
-		return "{"+ 
-					"\"Player1_Move\": \"" + player1.getSelectedMove() + "\"," + 
-					"\"Player2_Move\": \"" + player2.getSelectedMove() + "\"," +
-					"\"Player1_Score\": \"" + player1.getCurrentScore() + "\","+ 				
-					"\"Player2_Score\": \"" + player2.getCurrentScore() + "\"" + 					
-				"}";
-		
 	}
 
 }

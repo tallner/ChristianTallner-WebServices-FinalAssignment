@@ -41,7 +41,7 @@ public class CalcServiceTest {
 	@Test//(expected = NumberFormatException.class)
 	public void testSub_badInput() {
 		String actual = sut.Multiplication("a", "4");
-		String expected = "Check your inputs";
+		String expected = "[ \" Check your input values \" ]";
 		assertEquals(expected, actual);
 	}
 	
@@ -67,7 +67,7 @@ public class CalcServiceTest {
 	@Test//(expected = NumberFormatException.class)
 	public void testAdd_badInput() {
 		String actual = sut.Multiplication("a", "4");
-		String expected = "Check your inputs";
+		String expected = "[ \" Check your input values \" ]";
 		assertEquals(expected, actual);
 	}
 	
@@ -93,7 +93,7 @@ public class CalcServiceTest {
 	@Test//(expected = NumberFormatException.class)
 	public void testMult_badInput() {
 		String actual = sut.Multiplication("a", "4");
-		String expected = "Check your inputs";
+		String expected = "[ \" Check your input values \" ]";
 		assertEquals(expected, actual);
 	}
 		
@@ -146,7 +146,7 @@ public class CalcServiceTest {
 		String actualMult = sut.MultVal("mult", values);
 		String actualSub = sut.MultVal("sub", values);
 
-		String expected = "Check your values inputs";
+		String expected = "[ \" Check your input values \" ]";
 		assertEquals(expected, actualAdd);
 		assertEquals(expected, actualMult);
 		assertEquals(expected, actualSub);

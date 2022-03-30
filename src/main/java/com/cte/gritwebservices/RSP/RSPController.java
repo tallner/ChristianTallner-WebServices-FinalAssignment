@@ -53,19 +53,4 @@ public class RSPController {
 		return rspGame.getTotalResult_Json();
 	}
 	
-	/*
-	 * private String ObjectJson() { return "{"+ "\"TotalNrOfGames\": \"" +
-	 * rspGame.getNrOfGamesPlayed() + "\"," +
-	 * 
-	 * "\"Player 1\":" + "[{"+ "\"TotalWins\":" + "\"" +
-	 * rspGame.getPlayer1TotalWins() + "\""+ "," + "\"TotalLoss\":" + "\"" +
-	 * rspGame.getPlayer1TotalLost() + "\""+ "," + "\"TotalTie\":" + "\"" +
-	 * rspGame.getPlayer1TotalTies() + "\""+ "}]"+ "," +
-	 * 
-	 * "\"Player 2\":" + "[{"+ "\"TotalWins\":" + "\"" +
-	 * rspGame.getPlayer2TotalWins() + "\""+ "," + "\"TotalLoss\":" + "\"" +
-	 * rspGame.getPlayer2TotalLost() + "\""+ "," + "\"TotalTie\":" + "\"" +
-	 * rspGame.getPlayer2TotalTies() + "\""+ "}]"+ "}"; }
-	 */
-
 }
