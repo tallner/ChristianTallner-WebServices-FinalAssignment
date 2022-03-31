@@ -13,7 +13,7 @@ public class CSVService {
 	{
 		
 		var csvFile = new ClassPathResource(fileName);
-		if (!csvFile.exists()) return "[ \" File not found \" ]";
+		if (!csvFile.exists()) return "[\"File not found\"]";
 		
 		
 		String JSONstart = "[";

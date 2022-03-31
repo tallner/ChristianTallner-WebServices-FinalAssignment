@@ -1,4 +1,4 @@
-package com.cte.Calculator.CSVreader;
+package com.cte.CSVreader;
 
 import static org.junit.jupiter.api.Assertions.*;
 

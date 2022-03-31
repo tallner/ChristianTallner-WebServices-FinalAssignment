@@ -7,8 +7,8 @@ CSV-JSON. Ska man göra en egen JSON parser eller använda färdigt lib?
 
 
 -Todo-
-gör länkar till funktionerna på swagger
 om du hinner, göra JSON med patterns istället
 Slumpmässiga bilder tas från resources-mappen
 Glöm inte testa med tokig eller ingen data
 om du hinner, omstrukturera CSV parsern i CSVReader
+Fler tester för CSV
