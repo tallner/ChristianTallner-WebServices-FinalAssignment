@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
 import org.springframework.util.StreamUtils;
@@ -15,7 +16,7 @@ import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
-public class RSPController {
+public class RSPController{
 	
 	private RSPService rspGame = new RSPService(); //use the RSPmodel to set up a new game
 	

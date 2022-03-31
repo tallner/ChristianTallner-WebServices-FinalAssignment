@@ -1,4 +1,4 @@
-package RSP;
+package com.cte.RSP;
 
 import static org.junit.Assert.*;
 
@@ -38,12 +38,14 @@ public class RSPendpointTest {
 		String actual = HttpHelper.UrlResponse(query, "post", body);
 
 		assertNotEquals(actual, notExpected);
+		//assertequals gör en reversed json för att testa detta
 
 	}
 	
 	@Test
 	public void testTotalScoreEndpoint() throws IOException {
-		String pattern = "{\"TotalNrOfGames\": \"%s\",\"Player 1\":[{\"TotalWins\":\"%s\",\"TotalLoss\":\"%s\",\"TotalTie\":\"%s\"}],\"Player 2\":[{\"TotalWins\":\"%s\",\"TotalLoss\":\"%s\",\"TotalTie\":\"%s\"}]}";
+		String pattern = 
+				"{\"TotalNrOfGames\": \"%s\",\"Player 1\":[{\"TotalWins\":\"%s\",\"TotalLoss\":\"%s\",\"TotalTie\":\"%s\"}],\"Player 2\":[{\"TotalWins\":\"%s\",\"TotalLoss\":\"%s\",\"TotalTie\":\"%s\"}]}";
 		String expectedFormat = String.format(pattern, 5,5,5,5,5,5,5);
 		
 		String notExpected = "[ \" Check your input values \" ]";
