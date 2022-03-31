@@ -1,8 +1,9 @@
 -Frågor-
 Landing page vara samma som documentation?
 Länkar till de olika sidorna från documentationssidan?
+
 Hur få in assertEquals i RSPtests när svaren man får ändras? kan man använda patterns?
-CSV-JSON. Ska man göra en egen JSON parser eller använda färdigt lib?
+CSV-JSON. Ska man göra en egen JSON parser eller använda färdigt lib? 
 
 
 -Todo-
@@ -10,4 +11,4 @@ gör länkar till funktionerna på swagger
 om du hinner, göra JSON med patterns istället
 Slumpmässiga bilder tas från resources-mappen
 Glöm inte testa med tokig eller ingen data
-om du hinner, snygga till CSV parser i CSVReader
+om du hinner, omstrukturera CSV parsern i CSVReader

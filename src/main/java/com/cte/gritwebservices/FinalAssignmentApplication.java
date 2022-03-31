@@ -10,17 +10,16 @@ import io.swagger.v3.oas.annotations.info.Info;
 		title = "API documentation for final assignement in Webservices", 
 		version = "0.0.1", 
 		description = 
-			"This is an API test and description for following functionalities" +
-			"<br>" + 
-			"The calculator; able to process 3 arithmetics:" +
-			"<ol>"
-			+ "<li>Substraction</li>"
-			+ "<li>Multiplication</li>"
-			+ "<li>Addition</li>"
-			+ "</ol>" + 
-			"<br>" +
-			"There is also support for selecting a spcific arithmetic in the Multiple Arithmetics endpoint."		
+			"<h4>This is an API description for following functionalities:</h4>" +
+			"<ol>" +
+			"<li><a href=\"/calc\" target=_blank>The calculator; able to process 3 arithmetics or select one and use multiple values.</a></li>" +
+			"<li><a href=\"/rspgame\" target=_blank>The Rock Scissor Paper; standard RSP game.</a></li>" +
+			"<li><a href=\"/csv\" target=_blank>CSV to JSON; parse a simple CSV file to JSON</a></li>" +
+			"<li><a href=\"/pic\" target=_blank>Random picture; return a random picture</a></li>" + 
+			"</ol>"
 		))
+
+
 
 @SpringBootApplication
 public class FinalAssignmentApplication {
