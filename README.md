@@ -13,15 +13,15 @@
 
 ### Handing in
 - [ ] Friday 1st April 2022 16:00
-- [ ] Complete project on github account
+- [x] Complete project on github account
 - [x] Name it YOURNAME-COURSE-PROJECT
 - [ ] Mark with the grade you are aiming for
-- [ ] Book 15 minutes status meeting via Doodle 2 days before handing in 
+- [x] Book 15 minutes status meeting via Doodle 2 days before handing in 
 
 ### Functionality overview
 - [ ] Functionalities from each separate assignment in the course
 - [ ] Each API documented
-- [ ] Root ("/") is landing a page where all functionlities and documents are linked.
+- [x] Root ("/") is landing a page where all functionlities and documents are linked.
 
 ### Functions and subfunctions
 - [x] Kalcylator
@@ -35,11 +35,11 @@
   * [x] See all results
   * [x] Tests
 
-- [ ] Read CSV fil
-  * [ ] Return resultat as Json
+- [x] Read CSV fil
+  * [x] Return resultat as Json
 
-- [ ] Read pictures
-  * [ ] Return random picture
+- [x] Read pictures
+  * [x] Return random picture
 
 ### Grading
 - [ ] Use HTTP Request methods correct
@@ -54,7 +54,7 @@
   * [ ] Exemple
     * [ ] Test en endpoint so it replies on correct path with correct values
     * [ ] Test the endpoints functionlity and logic in its serviceclass
-- [ ] Classes self-aware, eg control its own documentation and return result
+- [x] Classes self-aware, eg control its own documentation and return result
 
 
 
