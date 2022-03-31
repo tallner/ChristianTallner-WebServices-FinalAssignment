@@ -10,8 +10,9 @@ import org.springframework.http.MediaType;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping
+@RestController
 public class RandomPicController {
 	
 	@RequestMapping(
@@ -20,17 +21,10 @@ public class RandomPicController {
 			produces = MediaType.IMAGE_JPEG_VALUE)
 	public void img(HttpServletResponse response) throws IOException {
 		
-		int min = 1;
-		int max = 10;
-		int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
-		
-		System.out.println("test"+randomNum);
-		
-		var imgFile = new ClassPathResource("1.jpg");
-		System.out.println(imgFile.getPath());
-		
+		RandomPicService randomPic = new RandomPicService();
+
 		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
-		StreamUtils.copy(imgFile.getInputStream(), response.getOutputStream());
+		StreamUtils.copy(randomPic.generateRandomPicture().getInputStream(), response.getOutputStream());
 	}
 
 }
