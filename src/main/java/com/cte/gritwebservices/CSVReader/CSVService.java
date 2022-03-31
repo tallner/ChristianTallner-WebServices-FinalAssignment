@@ -11,7 +11,11 @@ public class CSVService {
 	
 	public String readFile(String fileName ) throws FileNotFoundException, IOException 
 	{
+		
 		var csvFile = new ClassPathResource(fileName);
+		if (!csvFile.exists()) return "[ \" File not found \" ]";
+		
+		
 		String JSONstart = "[";
 		String JSONend = "]";
 		String JSONstartKeyValuePair = "{";
