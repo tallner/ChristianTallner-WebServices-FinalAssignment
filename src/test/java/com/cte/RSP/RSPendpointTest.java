@@ -4,6 +4,10 @@ import static org.junit.Assert.*;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -33,17 +37,17 @@ public class RSPendpointTest {
 		String body = "player1Move=" + testVar1 + "&player2Move=" + testVar2;
 		
 		String actual = HttpHelper.UrlResponse(query, "post", body, "UTF-8");
+		System.out.println(actual);
 
 		assertNotEquals(actual, notExpected);
-		//assertequals gör en reversed json för att testa detta
+
 
 	}
 	
 	@Test
 	public void testTotalScoreEndpoint() throws IOException {
-		String pattern = 
-				"{\"TotalNrOfGames\": \"%s\",\"Player 1\":[{\"TotalWins\":\"%s\",\"TotalLoss\":\"%s\",\"TotalTie\":\"%s\"}],\"Player 2\":[{\"TotalWins\":\"%s\",\"TotalLoss\":\"%s\",\"TotalTie\":\"%s\"}]}";
-		String expectedFormat = String.format(pattern, 5,5,5,5,5,5,5);
+		String expectedStart = "{\"TotalNrOfGames\": ";//\"666\",\"Player 1\":[{\"TotalWins\":\"666\",\"TotalLoss\":\"666\",\"TotalTie\":\"666\"}],\"Player 2\":[{\"TotalWins\":\"666\",\"TotalLoss\":\"666\",\"TotalTie\":\"666\"}]}";
+		String actualStart = ""; 
 		
 		String notExpected = "[ \" Check your input values \" ]";
 
@@ -51,7 +55,14 @@ public class RSPendpointTest {
 		String query = url;
 		
 		String actual = HttpHelper.UrlResponse(query, "get", null, "UTF-8");
+		
+		//Check if the start of the returned values is OK, if so assume it is ok :)
+		for (int i = 0; i < 19; i++) {
+			actualStart+=actual.charAt(i);	
+		}
+		
 
+		assertEquals(actualStart, expectedStart);
 		assertNotEquals(actual, notExpected);
 
 	}

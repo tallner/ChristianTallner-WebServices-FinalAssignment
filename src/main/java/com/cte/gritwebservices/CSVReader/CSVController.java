@@ -16,7 +16,7 @@ import io.swagger.v3.oas.annotations.Operation;
 @RestController
 public class CSVController {
 		
-		@Operation(summary = "Convert CSV file to JSON", description = "Use sample.csv to test", tags="CSV to JSON")
+		@Operation(summary = "Convert CSV file to JSON", description = "Possible inputs <br> -sample.csv <br> -simplesample.csv", tags="CSV to JSON")
 		@RequestMapping(
 				value = "/csvtojson",
 				method = RequestMethod.GET,
