@@ -60,11 +60,11 @@ public class RSPService {
 				
 				"\"Player 2\":" + 
 					"[{"+
-						"\"TotalWins\":" + "\"" + player1.getNrOfWins() + "\""+ 
+						"\"TotalWins\":" + "\"" + player2.getNrOfWins() + "\""+ 
 						"," +
-						"\"TotalLoss\":" + "\"" + player1.getNrOfLost() + "\""+ 
+						"\"TotalLoss\":" + "\"" + player2.getNrOfLost() + "\""+ 
 						"," +
-						"\"TotalTie\":" + "\"" + player1.getNrOfTie() + "\""+
+						"\"TotalTie\":" + "\"" + player2.getNrOfTie() + "\""+
 					"}]"+
 				"}";
 	}

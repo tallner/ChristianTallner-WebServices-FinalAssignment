@@ -1,8 +1,7 @@
 Siktar på VG
 
 Hur få in assertEquals i RSPtests när svaren man får ändras? kan man använda patterns?
-1 Titta på allt utom de värden som ändra
-2 (Använd regex och matches)
+Skulle läst mig in mer på regex och matches om jag hunnit
 
 Fler tester för CSV
 - skicka in enkel CSVfil, när den kommer tillbaka som JSON, parsa tillbaks till CSV
