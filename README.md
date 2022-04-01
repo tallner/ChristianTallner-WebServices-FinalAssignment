@@ -20,7 +20,7 @@
 
 ### Functionality overview
 - [x] Functionalities from each separate assignment in the course
-- [ ] Each API documented
+- [x] Each API documented
 - [x] Root ("/") is landing a page where all functionlities and documents are linked.
 
 ### Functions and subfunctions
@@ -42,11 +42,11 @@
   * [x] Return random picture
 
 ### Grading
-- [ ] Use HTTP Request methods correct
-- [ ] Data, beans, controller, logic etc for API:s in their own separate classes
+- [x] Use HTTP Request methods correct
+- [x] Data, beans, controller, logic etc for API:s in their own separate classes
 - [ ] Documentation
 - [x] Data returned in Json, except pictures
-- [ ] Basic error handling; error page and show documentaion for that error
+- [x] Basic error handling; error page and show documentation for that error
 - [x] Codestructure designed and thought through. Use help classes when needed, no static beans
 - [ ] No known bugs
 - [ ] No compile errors
