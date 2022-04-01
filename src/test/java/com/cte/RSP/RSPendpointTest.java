@@ -2,11 +2,8 @@ package com.cte.RSP;
 
 import static org.junit.Assert.*;
 
-import java.io.DataOutputStream;
+
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
 
 import org.junit.Before;
 import org.junit.Test;

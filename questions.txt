@@ -1,14 +1,18 @@
--Frågor-
-Landing page vara samma som documentation?
-Länkar till de olika sidorna från documentationssidan?
-
 Hur få in assertEquals i RSPtests när svaren man får ändras? kan man använda patterns?
-CSV-JSON. Ska man göra en egen JSON parser eller använda färdigt lib? 
+1 Titta på allt utom de värden som ändra
+2 Använd regex och matches
 
+Fler tester för CSV
+- skicka in enkel CSVfil, när den kommer tillbaka som JSON, parsa tillbaks till CSV
+
+Testa bild
+- ta reda på hur värdet hanteras i byte, det är troligtvis signed och kan inte jämföras
+- gör om till int(0-255), sen till bitsträng och titta på värdet
 
 -Todo-
 om du hinner, göra JSON med patterns istället
-Slumpmässiga bilder tas från resources-mappen
 Glöm inte testa med tokig eller ingen data
 om du hinner, omstrukturera CSV parsern i CSVReader
-Fler tester för CSV
+
+
+
