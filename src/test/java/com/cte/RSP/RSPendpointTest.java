@@ -2,11 +2,8 @@ package com.cte.RSP;
 
 import static org.junit.Assert.*;
 
-import java.io.DataOutputStream;
+
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +32,7 @@ public class RSPendpointTest {
 		String query = url;
 		String body = "player1Move=" + testVar1 + "&player2Move=" + testVar2;
 		
-		String actual = HttpHelper.UrlResponse(query, "post", body);
+		String actual = HttpHelper.UrlResponse(query, "post", body, "UTF-8");
 
 		assertNotEquals(actual, notExpected);
 		//assertequals gör en reversed json för att testa detta
@@ -53,7 +50,7 @@ public class RSPendpointTest {
 		String url = sut + "/rsp";
 		String query = url;
 		
-		String actual = HttpHelper.UrlResponse(query, "get", null);
+		String actual = HttpHelper.UrlResponse(query, "get", null, "UTF-8");
 
 		assertNotEquals(actual, notExpected);
 

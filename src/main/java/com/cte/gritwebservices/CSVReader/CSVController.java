@@ -3,17 +3,12 @@ package com.cte.gritwebservices.CSVReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.Operation;
-
-import org.springframework.util.StreamUtils;
-import org.springframework.core.io.ClassPathResource;
 
 
 
@@ -29,7 +24,7 @@ public class CSVController {
 		public String csvttojson(String filename) throws FileNotFoundException, IOException {
 			CSVService myReader = new CSVService();
 			
-			String text = myReader.readFile(filename);
+			String text = myReader.JSONparser(filename);
 			return text;
 		}
 
