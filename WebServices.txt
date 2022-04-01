@@ -1,0 +1,24 @@
+Siktar på VG
+
+
+
+
+Saker jag inte är riktigt nöjd med:
+
+RSPtests när svaren man får tillbaka ändras?
+->Skulle läst mig in mer på regex och matches om jag hunnit
+
+Tester för CSV
+- Om jag hade hunnit hade jag gjort en generisk tester som kunde ta vilken CSV-fil som helst och parsa svaret tillbaka från JSON till CSV och jämföra med ursprungliga filen
+
+Documentation
+- exempel inte implementerat
+
+JSON returns
+- gör om till ett common pattern
+
+CSV-JSON parser
+- gör så att man kan välja en fil från var som helst
+
+Allmänt
+- Ibland lite rörig kod kanske
