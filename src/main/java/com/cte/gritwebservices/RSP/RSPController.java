@@ -31,7 +31,7 @@ public class RSPController{
 		StreamUtils.copy(website.getInputStream(), response.getOutputStream());
 	}
 	
-	@Operation(summary = "Evaluate round", description = "Evaluate player inputs in this round", tags="Rock Scissors Paper")
+	@Operation(summary = "Evaluate round", description = "Evaluate player inputs in this round <br> Possible inputs <br> -rock <br> -scissors <br> -paper <br> -computer", tags="Rock Scissors Paper")
 	@RequestMapping(
 			value="/rsp",
 			method = RequestMethod.POST,

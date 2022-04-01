@@ -60,7 +60,10 @@ public class CalcController {
 	}
 	
 	//user can select sub add or mult and any number of input variables
-	@Operation(summary = "Select arithmetics GET request", description = "Choose arithmetic in URL", tags="Multiple arithmetics")
+	@Operation(
+			summary = "Select arithmetics GET request", 
+			description = "Choose arithmetic in URL <br> Possible values <br> type <br>-add <br>-sub <br>-mult <br> <br>value <br>-Multiple numbers nr1,nr2,...,nrx <br>-example 1,4,6,8", 
+			tags="Multiple arithmetics")
 	@RequestMapping(value="/calc/multVal/{type}/{values}",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String multVal(@PathVariable String type, @PathVariable String[] values){	 
 		return myCalcService.MultVal(type, values);

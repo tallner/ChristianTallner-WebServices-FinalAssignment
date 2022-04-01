@@ -1,10 +1,11 @@
 Siktar på VG
 
 Hur få in assertEquals i RSPtests när svaren man får ändras? kan man använda patterns?
-Skulle läst mig in mer på regex och matches om jag hunnit
+->Skulle läst mig in mer på regex och matches om jag hunnit
 
 Fler tester för CSV
-- skicka in enkel CSVfil, när den kommer tillbaka som JSON, parsa tillbaks till CSV
+- skicka in enkel CSVfil, när den kommer tillbaka som JSON jämför med en json sträng
+- Mer tid hade jag gjort en generisk tester som kunde ta vilken CSV-fil som helst och parsa svaret tillbaka från JSON till CSV och jämföra med ursprungliga filen
 
 Documentation
 - exempel inte implementerat
@@ -12,8 +13,5 @@ Documentation
 JSON returns
 - gör om till ett common pattern
 
-
 CSV-JSON parser
 - gör så att man kan välja en fil från var som helst
-
-
