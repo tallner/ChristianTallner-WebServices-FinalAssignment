@@ -44,16 +44,16 @@
 ### Grading
 - [x] Use HTTP Request methods correct
 - [x] Data, beans, controller, logic etc for API:s in their own separate classes
-- [ ] Documentation
+- [x] Documentation
 - [x] Data returned in Json, except pictures
 - [x] Basic error handling; error page and show documentation for that error
 - [x] Codestructure designed and thought through. Use help classes when needed, no static beans
-- [ ] No known bugs
-- [ ] No compile errors
-- [ ] Unit tests built for each method
-  * [ ] Exemple
-    * [ ] Test en endpoint so it replies on correct path with correct values
-    * [ ] Test the endpoints functionlity and logic in its serviceclass
+- [x] No known bugs
+- [x] No compile errors
+- [x] Unit tests built
+  * [x] Exemple
+    * [x] Test en endpoint so it replies on correct path with correct values
+    * [x] Test the endpoints functionlity and logic in its serviceclass
 - [x] Classes self-aware, eg control its own documentation and return result
 
 
