@@ -19,7 +19,7 @@
 - [x] Book 15 minutes status meeting via Doodle 2 days before handing in 
 
 ### Functionality overview
-- [ ] Functionalities from each separate assignment in the course
+- [x] Functionalities from each separate assignment in the course
 - [ ] Each API documented
 - [x] Root ("/") is landing a page where all functionlities and documents are linked.
 
@@ -45,9 +45,9 @@
 - [ ] Use HTTP Request methods correct
 - [ ] Data, beans, controller, logic etc for API:s in their own separate classes
 - [ ] Documentation
-- [ ] Data returned in Json, except pictures
+- [x] Data returned in Json, except pictures
 - [ ] Basic error handling; error page and show documentaion for that error
-- [ ] Codestructure designed and thought through. Use help classes when needed, no static beans
+- [x] Codestructure designed and thought through. Use help classes when needed, no static beans
 - [ ] No known bugs
 - [ ] No compile errors
 - [ ] Unit tests built for each method
