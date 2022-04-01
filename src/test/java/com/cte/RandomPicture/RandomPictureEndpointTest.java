@@ -17,40 +17,20 @@ public class RandomPictureEndpointTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		sut = "http://localhost:8080";
+		sut = "http://localhost:8080/randpic";
 	}
 	
-	@Test
+	@Test //Only test jpg files
 	public void testHeaderBytes() throws IOException {
-		// http://jubin.tech/articles/2018/12/05/Detect-image-format-using-java.html
-		byte[] jpgHeader = new byte[] {(byte) 0xEF, (byte)0xBF, (byte)0xBD};
-		byte[] JPEG_HEADER = new byte[] {(byte) 0xFF, (byte)0xD8, (byte)0xFF};
+		// Start bytes of JPG is FF D8 FF, but UTF-16 format adds FE FF as a format identifier, so I add it in the sequence
+		byte[] JPEG_HEADER = new byte[] {(byte) 0xFE, (byte) 0xFF, (byte) 0xFF, (byte)0xD8, (byte)0xFF};
 
-		var img = HttpHelper.UrlResponse("http://localhost:8080/", "GET", null);
-		byte[] imgBytes = img.getBytes();
+		var img = HttpHelper.UrlResponse(sut, "GET", null, "UTF-16");
+		byte[] imgBytes = img.getBytes("UTF-16");
 		
-		
-	//	String test = new String(imgBytes);
-	//	System.out.println("test");
-	//	System.out.println(img.getBytes());
-		System.out.println(imgBytes.length);
-		
-		for (int i = 0; i < jpgHeader.length; i++) {
-			System.out.println(JPEG_HEADER[i]);
-			System.out.println(imgBytes[i]);
-			System.out.println(jpgHeader[i]);
+		for (int i = 0; i < JPEG_HEADER.length ; i++) {
+			if (imgBytes[i] != JPEG_HEADER[i] ) assertTrue(false); 
 		}
-
-		/*
-		 * int i = 0; //System.out.println(i); for (byte b : JPEG_HEADER) {
-		 * 
-		 * if (imgBytes[i] != b) {
-		 * 
-		 * //assertTrue(false); System.out.println(b); System.out.println(imgBytes[i]);
-		 * System.out.println(jpgHeader[i]); } i++;
-		 * 
-		 * }
-		 */
 		
 		assertTrue(true);
 	}

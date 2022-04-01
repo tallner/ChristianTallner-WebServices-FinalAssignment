@@ -31,7 +31,7 @@ public class CSVreaderEndpointTest {
 		String query = url + body;
 		
 
-		String actual = HttpHelper.UrlResponse(query, "get", null);
+		String actual = HttpHelper.UrlResponse(query, "get", null, "UTF-8");
 		
 		
 		assertEquals(actual, expected);

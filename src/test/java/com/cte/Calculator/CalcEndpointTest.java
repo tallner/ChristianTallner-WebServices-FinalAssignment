@@ -33,7 +33,7 @@ public class CalcEndpointTest {
 		String url = sut + "/calc/sub";
 		String params = "?nr1=" + testVar1 + "&nr2=" + testVar2;
 		String query = url + params;
-		String actual = HttpHelper.UrlResponse(query, "get", null);
+		String actual = HttpHelper.UrlResponse(query, "get", null, "UTF-8");
 		
 		assertEquals(actual, expected);
 		assertNotEquals(actual, baseText);
@@ -53,7 +53,7 @@ public class CalcEndpointTest {
 		String url = sut + "/calc/add";
 		String params = "?nr1=" + testVar1 + "&nr2=" + testVar2;
 		String query = url + params;
-		String actual = HttpHelper.UrlResponse(query, "get", null);
+		String actual = HttpHelper.UrlResponse(query, "get", null, "UTF-8");
 		
 		assertEquals(actual, expected);
 		assertNotEquals(actual, baseText);
@@ -73,7 +73,7 @@ public class CalcEndpointTest {
 		String url = sut + "/calc/mult";
 		String params = "?nr1=" + testVar1 + "&nr2=" + testVar2;
 		String query = url + params;
-		String actual = HttpHelper.UrlResponse(query, "get", null);
+		String actual = HttpHelper.UrlResponse(query, "get", null, "UTF-8");
 		
 		assertEquals(actual, expected);
 		assertNotEquals(actual, baseText);
@@ -105,9 +105,9 @@ public class CalcEndpointTest {
 		String querySub = url + paramsSub;
 		String queryAdd = url + paramsAdd;
 		String queryMult = url + paramsMult;
-		String actualSub = HttpHelper.UrlResponse(querySub, "get", null);
-		String actualAdd = HttpHelper.UrlResponse(queryAdd, "get", null);
-		String actualMult = HttpHelper.UrlResponse(queryMult, "get", null);
+		String actualSub = HttpHelper.UrlResponse(querySub, "get", null, "UTF-8");
+		String actualAdd = HttpHelper.UrlResponse(queryAdd, "get", null, "UTF-8");
+		String actualMult = HttpHelper.UrlResponse(queryMult, "get", null, "UTF-8");
 		
 		assertEquals(actualSub, expected[0]);
 		assertNotEquals(actualSub, baseText);

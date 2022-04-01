@@ -7,10 +7,6 @@ Hur få in assertEquals i RSPtests när svaren man får ändras? kan man använd
 Fler tester för CSV
 - skicka in enkel CSVfil, när den kommer tillbaka som JSON, parsa tillbaks till CSV
 
-Testa bild
-- ta reda på hur värdet hanteras i byte, det är troligtvis signed och kan inte jämföras
-- gör om till int(0-255), sen till bitsträng och titta på värdet
-
 Documentation
 - exempel inte implementerat
 
