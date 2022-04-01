@@ -29,7 +29,7 @@ public class CSVController {
 		public String csvttojson(String filename) throws FileNotFoundException, IOException {
 			CSVService myReader = new CSVService();
 			
-			String text = myReader.readFile(filename);
+			String text = myReader.JSONparser(filename);
 			return text;
 		}
 

@@ -9,19 +9,20 @@ import org.springframework.core.io.ClassPathResource;
 
 public class CSVService {
 	
-	public String readFile(String fileName ) throws FileNotFoundException, IOException 
+	public String JSONparser(String fileName ) throws FileNotFoundException, IOException 
 	{
 		
+		// if file does not exist, then return with an error message
 		var csvFile = new ClassPathResource(fileName);
 		if (!csvFile.exists()) return "[\"File not found\"]";
 		
-		
-		String JSONstart = "[";
-		String JSONend = "]";
-		String JSONstartKeyValuePair = "{";
-		String JSONendKeyValuePair = "}";
-		String JSONseparator = ",";
-		String JSONFnutt = "\"";
+		// set up characters neeeded for parsing to JSON string
+		final String JSONstart = "[";
+		final String JSONend = "]";
+		final String JSONstartKeyValuePair = "{";
+		final String JSONendKeyValuePair = "}";
+		final String JSONseparator = ",";
+		final String JSONFnutt = "\"";
 		
 		String result = JSONstart;//Start of the JSON string
 		int parseCSVtoJSON = 0;
@@ -95,22 +96,6 @@ public class CSVService {
 		return result;
 	}
 	
-	private String processLine(String textLine) {
-		String result = "";
-		
-		Scanner rowScanner = new Scanner(textLine);
-		rowScanner.useDelimiter(",");
-
-		while(rowScanner.hasNext())
-		{
-			result += rowScanner.next() + " :: ";
-		}
-		
-		rowScanner.close();
-
-		return result;
-	}
-	
 	private ArrayList<String> getJSONkeys(String CSVString) {
 		
 		ArrayList<String> JSONkeys = new ArrayList<String>();
@@ -125,8 +110,7 @@ public class CSVService {
 		
 		rowScanner.close();
 		
-		//System.out.println(JSONkeys);
-		
+
 		return JSONkeys;
 	}
 	
@@ -144,88 +128,7 @@ public class CSVService {
 		
 		rowScanner.close();
 		
-		//System.out.println(JSONvalues);
-		
 		return JSONvalues;
-	}
-	
-	private String connectJSONKeysValues(ArrayList<String> JSONkeys, ArrayList<String> JSONvalues) {
-		
-		String JSONkeyValues = null;
-
-		for (int i = 0; i < JSONkeys.size(); i++) {
-			
-			
-			JSONkeyValues += JSONkeys.get(i)+":"+JSONvalues.get(i);
-			
-		}
-		
-	//	for (int i = 0; i < JSONkeyValues.size(); i++) {
-	//		test1 += JSONkeyValues.get(i);
-	//	}
-		
-		
-		
-		
-		
-		
-		System.out.println(JSONkeyValues);
-		
-	
-		
-		return JSONkeyValues;
-	}
-	
-	private String JSONparser(String CSVstring) {
-		String resultJSON = "";
-		ArrayList<String> keys = new ArrayList<String>();
-		String CSVseparator = ",";
-		String JSONseparator = ",";
-		String JSONstart = "\"[";
-		String JSONend = "\"]";
-		String JSONstartKeyValuePair = "{";
-		String JSONendKeyValuePair = "}";
-		
-		
-		
-		
-		// enbart strängar
-		// läs in csv som en sträng
-		// identifiera keys
-		// identifiera values - ex spara i listarray eller hashmap
-		// gör om till sträng och klistra in separatorer för JSON format 
-		
-		
-		// exempel
-		// CSV
-		// item,quantity
-		// "car","10"
-		// "bus","5"
-		
-		// JSON
-		//[ {
-		//	  "item" : "car",
-		//	  "quantity" : "10"
-		//	}, {
-		//	  "item" : "bus",
-		//	  "quantity" : "5"
-		//	} ]
-		
-		// JSON string
-		// "[{\"item\":\"car\",\"quantity\":\"10\"},{\"item\":\"bus\",\"quantity\":\"5\"}]"
-		// start of JSON 					--> [
-		// end of JSON 						--> ]
-		// start of key-value pair 			--> }
-		// end of key-value pair 			--> {
-		// separator of key-value pairs 	--> ,
-		// separator of key-value sections 	--> ,
-		// start/end of each key and value 	--> \"
-		
-		
-		
-		
-		
-		return resultJSON;
 	}
 
 }
