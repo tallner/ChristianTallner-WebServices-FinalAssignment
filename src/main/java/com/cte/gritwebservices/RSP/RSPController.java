@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
 import org.springframework.util.StreamUtils;
@@ -32,7 +31,7 @@ public class RSPController{
 		StreamUtils.copy(website.getInputStream(), response.getOutputStream());
 	}
 	
-	@Operation(summary = "Evaluate round", description = "Evaluate player inputs in this round", tags="RockScissorsPaper")
+	@Operation(summary = "Evaluate round", description = "Evaluate player inputs in this round", tags="Rock Scissors Paper")
 	@RequestMapping(
 			value="/rsp",
 			method = RequestMethod.POST,
@@ -44,7 +43,7 @@ public class RSPController{
 		return rspGame.calculateScore(player1Move, player2Move);
 	}
 	
-	@Operation(summary = "Total score", description = "Get total score", tags="RockScissorsPaper")
+	@Operation(summary = "Total score", description = "Get total score", tags="Rock Scissors Paper")
 	@RequestMapping(
 			value="/rsp",
 			method = RequestMethod.GET,
