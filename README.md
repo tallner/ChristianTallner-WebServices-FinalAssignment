@@ -12,10 +12,10 @@
 ## Requirements for this assignment
 
 ### Handing in
-- [ ] Friday 1st April 2022 16:00
+- [x] Friday 1st April 2022 16:00
 - [x] Complete project on github account
 - [x] Name it YOURNAME-COURSE-PROJECT
-- [ ] Mark with the grade you are aiming for
+- [x] Mark with the grade you are aiming for
 - [x] Book 15 minutes status meeting via Doodle 2 days before handing in 
 
 ### Functionality overview
